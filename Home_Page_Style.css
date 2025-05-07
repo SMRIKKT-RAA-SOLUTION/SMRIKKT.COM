@@ -1,0 +1,97 @@
+/* Font and base reset */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #0c0c0c;
+    /* Black */
+    color: #e0e0e0;
+    /* Light silver */
+}
+
+header {
+    background: linear-gradient(135deg, #8B0000, #4B0082);
+    /* Blood red to dark purple */
+    color: #ffffff;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header span {
+    color: #ADFF2F;
+    /* Lime green highlight */
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #111;
+    padding: 10px;
+    gap: 20px;
+}
+
+nav a {
+    color: #ADFF2F;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffffff;
+}
+
+section {
+    padding: 50px 20px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+
+section h2 {
+    color: #ADFF2F;
+    margin-bottom: 20px;
+}
+
+section img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+    border-radius: 12px;
+    box-shadow: 0 0 10px #8B0000;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+ul li i {
+    color: #ADFF2F;
+    margin-right: 10px;
+}
+
+a {
+    color: #ADFF2F;
+}
+
+footer {
+    background-color: #111;
+    color: #aaa;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #ADFF2F;
+    margin: 0 8px;
+    transition: 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffffff;
+}
