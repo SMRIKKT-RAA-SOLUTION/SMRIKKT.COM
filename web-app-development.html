@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- SEO Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Web & App Development Services by SMRIKKT RAA SOLUTIONS." />
+    <meta name="keywords" content="Web Development, App Development, SMRIKKT, Sri Lanka, Software Solutions" />
+    <meta name="author" content="SMRIKKT RAA SOLUTIONS" />
+
+    <title>Web & App Development | SMRIKKT RAA SOLUTIONS</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Main Stylesheet (Same as index.html) -->
+    <link rel="stylesheet" href="Home_Page_Style.css">
+
+    <!-- Page-Specific Animations -->
+    <style>
+        /* Hero Section for Service Page */
+        .service-hero {
+            height: 70vh;
+            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.95)),
+                        url('hero-bg.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .service-hero h1 {
+            font-size: 3rem;
+            animation: fadeInDown 1s ease-in-out;
+        }
+
+        .service-hero span {
+            color: #ADFF2F;
+        }
+
+        .service-hero p {
+            margin-top: 15px;
+            font-size: 1.2rem;
+            animation: fadeInUp 1.2s ease-in-out;
+        }
+
+        /* Service Details Section */
+        .service-details {
+            padding: 60px 10%;
+            text-align: center;
+        }
+
+        .service-details h2 {
+            color: #ADFF2F;
+            margin-bottom: 30px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .features-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .feature-card {
+            background: #111;
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #222;
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .feature-card i {
+            font-size: 2.5rem;
+            color: #ADFF2F;
+            margin-bottom: 15px;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(139, 0, 0, 0.5);
+        }
+
+        /* Process Section */
+        .process {
+            padding: 60px 10%;
+            background: #0a0a0a;
+            text-align: center;
+        }
+
+        .process h2 {
+            color: #ADFF2F;
+            margin-bottom: 40px;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .step {
+            background: #111;
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid #222;
+            transition: 0.3s;
+        }
+
+        .step:hover {
+            transform: scale(1.05);
+        }
+
+        .step span {
+            display: inline-block;
+            background: linear-gradient(135deg, #8B0000, #4B0082);
+            color: #fff;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        /* Call to Action */
+        .cta {
+            padding: 60px 10%;
+            text-align: center;
+        }
+
+        .cta h2 {
+            margin-bottom: 20px;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .service-hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">SMRIKKT</div>
+        <ul class="nav-links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="service-hero">
+        <div class="hero-content">
+            <h1>Web & App <span>Development</span></h1>
+            <p>Building modern, scalable, and high-performance digital solutions.</p>
+            <a href="index.html#contact" class="btn-primary">Start Your Project</a>
+        </div>
+    </section>
+
+    <!-- Service Details -->
+    <section class="service-details">
+        <h2>What We Offer</h2>
+        <p>
+            At SMRIKKT RAA SOLUTIONS, we craft powerful web and mobile applications tailored
+            to your business needs. Our solutions emphasize performance, security, and
+            exceptional user experience.
+        </p>
+
+        <div class="features-container">
+            <div class="feature-card">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Responsive Websites</h3>
+                <p>Fully responsive and SEO-optimized websites for all devices.</p>
+            </div>
+
+            <div class="feature-card">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Mobile Applications</h3>
+                <p>Custom Android and iOS applications with seamless performance.</p>
+            </div>
+
+            <div class="feature-card">
+                <i class="fas fa-shopping-cart"></i>
+                <h3>E-Commerce Solutions</h3>
+                <p>Secure and scalable online stores with payment integration.</p>
+            </div>
+
+            <div class="feature-card">
+                <i class="fas fa-server"></i>
+                <h3>Web Applications</h3>
+                <p>Robust and scalable web apps tailored to business workflows.</p>
+            </div>
+
+            <div class="feature-card">
+                <i class="fas fa-tools"></i>
+                <h3>Maintenance & Support</h3>
+                <p>Continuous updates, monitoring, and technical support.</p>
+            </div>
+
+            <div class="feature-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Security & Optimization</h3>
+                <p>Enhanced security and performance optimization for reliability.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Development Process -->
+    <section class="process">
+        <h2>Our Development Process</h2>
+        <div class="process-steps">
+            <div class="step">
+                <span>1</span>
+                <h3>Consultation</h3>
+                <p>Understanding your vision and project requirements.</p>
+            </div>
+            <div class="step">
+                <span>2</span>
+                <h3>Design</h3>
+                <p>Creating intuitive UI/UX designs and system architecture.</p>
+            </div>
+            <div class="step">
+                <span>3</span>
+                <h3>Development</h3>
+                <p>Building scalable and high-performance applications.</p>
+            </div>
+            <div class="step">
+                <span>4</span>
+                <h3>Testing</h3>
+                <p>Ensuring reliability, security, and optimal performance.</p>
+            </div>
+            <div class="step">
+                <span>5</span>
+                <h3>Deployment</h3>
+                <p>Launching the solution with full support and maintenance.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <h2>Ready to Build Your Digital Solution?</h2>
+        <p>Let’s transform your ideas into reality with cutting-edge technology.</p>
+        <a href="index.html#contact" class="btn-primary">Contact Us</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2026 SMRIKKT RAA SOLUTIONS. All Rights Reserved.</p>
+            <div class="social-icons">
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Smooth Scrolling -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const targetId = this.getAttribute('href');
+                if (targetId.startsWith("#") && targetId.length > 1) {
+                    e.preventDefault();
+                    document.querySelector(targetId).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        /* Scroll Reveal Animation */
+        const revealElements = document.querySelectorAll('.feature-card, .step');
+        const revealOnScroll = () => {
+            const windowHeight = window.innerHeight;
+            revealElements.forEach(el => {
+                const elementTop = el.getBoundingClientRect().top;
+                if (elementTop < windowHeight - 100) {
+                    el.style.opacity = 1;
+                    el.style.transform = "translateY(0)";
+                }
+            });
+        };
+
+        revealElements.forEach(el => {
+            el.style.opacity = 0;
+            el.style.transform = "translateY(30px)";
+            el.style.transition = "all 0.6s ease-out";
+        });
+
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll();
+    </script>
+
+</body>
+</html>

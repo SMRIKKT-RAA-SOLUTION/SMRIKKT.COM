@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- SEO Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Game Development and MODS by SMRIKKT RAA SOLUTIONS. Download our custom game modifications via QR codes." />
+    <meta name="keywords" content="Game Development, Game MODS, Unity, Unreal Engine, SMRIKKT, Sri Lanka" />
+    <meta name="author" content="SMRIKKT RAA SOLUTIONS" />
+
+    <title>Game Development & MODS | SMRIKKT RAA SOLUTIONS</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="Home_Page_Style.css">
+
+    <!-- Page-Specific Styles and Animations -->
+    <style>
+        /* Hero Section */
+        .service-hero {
+            height: 70vh;
+            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.95)),
+                        url('hero-bg.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .service-hero h1 {
+            font-size: 3rem;
+            animation: fadeInDown 1s ease-in-out;
+        }
+
+        .service-hero span {
+            color: #ADFF2F;
+        }
+
+        .service-hero p {
+            margin-top: 15px;
+            font-size: 1.2rem;
+            animation: fadeInUp 1.2s ease-in-out;
+        }
+
+        /* Service Details */
+        .service-details {
+            padding: 60px 10%;
+            text-align: center;
+        }
+
+        .service-details h2 {
+            color: #ADFF2F;
+            margin-bottom: 20px;
+        }
+
+        .service-details p {
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+        }
+
+        .features-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .feature-card {
+            background: #111;
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #222;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature-card i {
+            font-size: 2.5rem;
+            color: #ADFF2F;
+            margin-bottom: 15px;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(139, 0, 0, 0.5);
+        }
+
+        /* QR Code Section */
+        .qr-section {
+            padding: 60px 10%;
+            background: #0a0a0a;
+            text-align: center;
+        }
+
+        .qr-section h2 {
+            color: #ADFF2F;
+            margin-bottom: 20px;
+        }
+
+        .qr-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .qr-card {
+            background: #111;
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid #222;
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: 260px;
+        }
+
+        .qr-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(139, 0, 0, 0.5);
+        }
+
+        .qr-card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        /* Development Process */
+        .process {
+            padding: 60px 10%;
+            text-align: center;
+        }
+
+        .process h2 {
+            color: #ADFF2F;
+            margin-bottom: 40px;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .step {
+            background: #111;
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid #222;
+            transition: transform 0.3s;
+        }
+
+        .step:hover {
+            transform: scale(1.05);
+        }
+
+        .step span {
+            display: inline-block;
+            background: linear-gradient(135deg, #8B0000, #4B0082);
+            color: #fff;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        /* Call to Action */
+        .cta {
+            padding: 60px 10%;
+            text-align: center;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Scroll Reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .service-hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">SMRIKKT</div>
+        <ul class="nav-links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="service-hero">
+        <div class="hero-content">
+            <h1><span>Game Development</span> & MODS</h1>
+            <p>Creating immersive gaming experiences and powerful game modifications.</p>
+            <a href="index.html#contact" class="btn-primary">Start Your Project</a>
+        </div>
+    </section>
+
+    <!-- Service Details -->
+    <section class="service-details">
+        <h2>Our Expertise</h2>
+        <p>
+            SMRIKKT RAA SOLUTIONS develops engaging games and high-quality modifications (MODS)
+            for popular titles. Our expertise spans game design, gameplay enhancement, custom
+            features, and performance optimization, delivering unique experiences for players.
+        </p>
+
+        <div class="features-container">
+            <div class="feature-card reveal">
+                <i class="fas fa-gamepad"></i>
+                <h3>Custom Game Development</h3>
+                <p>Design and development of immersive games using Unity and Unreal Engine.</p>
+            </div>
+
+            <div class="feature-card reveal">
+                <i class="fas fa-puzzle-piece"></i>
+                <h3>Game MOD Development</h3>
+                <p>Creation of custom MODs that enhance gameplay and add new features.</p>
+            </div>
+
+            <div class="feature-card reveal">
+                <i class="fas fa-vr-cardboard"></i>
+                <h3>3D & VR Experiences</h3>
+                <p>Interactive 3D and virtual reality applications for next-generation gaming.</p>
+            </div>
+
+            <div class="feature-card reveal">
+                <i class="fas fa-bug"></i>
+                <h3>Game Testing & Optimization</h3>
+                <p>Performance tuning and bug fixing for smooth and stable gameplay.</p>
+            </div>
+
+            <div class="feature-card reveal">
+                <i class="fas fa-users"></i>
+                <h3>Community Support</h3>
+                <p>Continuous updates and support for gaming communities.</p>
+            </div>
+
+            <div class="feature-card reveal">
+                <i class="fas fa-download"></i>
+                <h3>Easy MOD Distribution</h3>
+                <p>Convenient download options through secure Mega Cloud links.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- QR Code Download Section -->
+    <section class="qr-section">
+        <h2>Download Our MODS</h2>
+        <p>Scan the QR codes below to download our latest game MODs from Mega Cloud.</p>
+
+        <div class="qr-container">
+            <div class="qr-card reveal">
+                <img src="88.png" alt="QR Code for MOD Download 1">
+                <h3>PROJECT IGI FILE</h3>
+                <p>Scan to download the Project IGI 1 from Mega Cloud.</p>
+            </div>
+
+            <div class="qr-card reveal">
+                <img src="89.png" alt="QR Code for MOD Download 2">
+                <h3>PROJECT IGI MOD</h3>
+                <p>Scan to download the Project IGI MOD from Mega Cloud.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Development Process -->
+    <section class="process">
+        <h2>Our Development Process</h2>
+        <div class="process-steps">
+            <div class="step reveal">
+                <span>1</span>
+                <h3>Concept & Design</h3>
+                <p>Understanding gameplay ideas and designing engaging experiences.</p>
+            </div>
+            <div class="step reveal">
+                <span>2</span>
+                <h3>Development</h3>
+                <p>Building games and MODs using advanced tools and technologies.</p>
+            </div>
+            <div class="step reveal">
+                <span>3</span>
+                <h3>Testing</h3>
+                <p>Ensuring stability, compatibility, and optimal performance.</p>
+            </div>
+            <div class="step reveal">
+                <span>4</span>
+                <h3>Distribution</h3>
+                <p>Providing easy access to MODs through secure Mega Cloud downloads.</p>
+            </div>
+            <div class="step reveal">
+                <span>5</span>
+                <h3>Support & Updates</h3>
+                <p>Continuous improvements and support for the gaming community.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <h2>Ready to Enhance Your Gaming Experience?</h2>
+        <p>Contact SMRIKKT to develop custom games or MODs tailored to your vision.</p>
+        <a href="index.html#contact" class="btn-primary">Contact Us</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2026 SMRIKKT RAA SOLUTIONS. All Rights Reserved.</p>
+            <div class="social-icons">
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll Reveal Animation Script -->
+    <script>
+        function revealOnScroll() {
+            const reveals = document.querySelectorAll('.reveal');
+            const windowHeight = window.innerHeight;
+
+            reveals.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                if (elementTop < windowHeight - 100) {
+                    element.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('load', revealOnScroll);
+    </script>
+
+</body>
+</html>
