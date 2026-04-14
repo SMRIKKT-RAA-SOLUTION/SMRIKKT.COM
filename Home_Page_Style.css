@@ -1,97 +1,204 @@
-/* Font and base reset */
-body {
+/* Base Styles */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: 'Montserrat', sans-serif;
     background-color: #0c0c0c;
-    /* Black */
     color: #e0e0e0;
-    /* Light silver */
+    line-height: 1.6;
 }
 
-header {
-    background: linear-gradient(135deg, #8B0000, #4B0082);
-    /* Blood red to dark purple */
-    color: #ffffff;
-    text-align: center;
-    padding: 40px 20px;
-}
-
-header span {
-    color: #ADFF2F;
-    /* Lime green highlight */
-}
-
-nav {
+/* Navigation */
+.navbar {
+    position: sticky;
+    top: 0;
+    background: rgba(0, 0, 0, 0.95);
     display: flex;
-    justify-content: center;
-    background-color: #111;
-    padding: 10px;
-    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    z-index: 1000;
+    border-bottom: 1px solid #222;
 }
 
-nav a {
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ADFF2F;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
     color: #ADFF2F;
     text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s ease;
+    font-weight: 600;
+    transition: 0.3s;
 }
 
-nav a:hover {
+.nav-links a:hover {
     color: #ffffff;
 }
 
-section {
-    padding: 50px 20px;
+/* Hero Section */
+.hero {
+    height: 90vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
+                url('hero-bg.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    border-bottom: 1px solid #333;
 }
 
-section h2 {
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-content span {
+    color: #ADFF2F;
+}
+
+.btn-primary {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #8B0000, #4B0082);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+}
+
+/* About Section */
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 60px 10%;
+    flex-wrap: wrap;
+}
+
+.about-image img {
+    width: 350px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #8B0000;
+}
+
+.about-text {
+    max-width: 600px;
+}
+
+.about-text h2 {
     color: #ADFF2F;
     margin-bottom: 20px;
 }
 
-section img {
-    max-width: 100%;
-    height: auto;
-    margin: 20px 0;
-    border-radius: 12px;
-    box-shadow: 0 0 10px #8B0000;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-ul li {
-    font-size: 1.1rem;
-    margin: 10px 0;
-}
-
-ul li i {
-    color: #ADFF2F;
-    margin-right: 10px;
-}
-
-a {
-    color: #ADFF2F;
-}
-
-footer {
-    background-color: #111;
-    color: #aaa;
+/* Services */
+.services {
     text-align: center;
-    padding: 20px;
-    font-size: 0.9rem;
+    padding: 60px 10%;
 }
 
-footer a {
+.services h2 {
     color: #ADFF2F;
-    margin: 0 8px;
-    transition: 0.3s ease;
+    margin-bottom: 40px;
 }
 
-footer a:hover {
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: #111;
+    padding: 30px;
+    border-radius: 15px;
+    transition: 0.3s;
+    border: 1px solid #222;
+}
+
+.service-card i {
+    font-size: 2.5rem;
+    color: #ADFF2F;
+    margin-bottom: 15px;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(139, 0, 0, 0.5);
+}
+
+/* Contact Section */
+.contact {
+    padding: 60px 10%;
+    text-align: center;
+}
+
+.contact-container {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background: #111;
+    color: #fff;
+}
+
+.contact-form button {
+    border: none;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    background: #111;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #222;
+}
+
+.social-icons a {
+    color: #ADFF2F;
+    margin: 0 10px;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
     color: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
