@@ -7,7 +7,7 @@
     <meta name="description" content="SMRIKKT RAA SOLUTIONS - Innovation in AI, Robotics, IoT, and Software Development." />
     <meta name="keywords" content="SMRIKKT, AI, Robotics, IoT, Embedded Systems, Sri Lanka" />
     <meta name="author" content="SMRIKKT RAA SOLUTIONS" />
-    
+
     <title>SMRIKKT RAA SOLUTIONS</title>
 
     <!-- Favicon -->
@@ -16,8 +16,8 @@
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!-- Font Awesome (Correct CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="Home_Page_Style.css">
@@ -69,26 +69,52 @@
     <section id="services" class="services">
         <h2>Our Services</h2>
         <div class="services-container">
-            <div class="service-card">
-                <i class="fas fa-code"></i>
-                <h3>Web & App Development</h3>
-                <p>Modern, responsive, and scalable digital solutions.</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-microchip"></i>
-                <h3>IoT & Embedded Systems</h3>
-                <p>Smart hardware solutions for real-world applications.</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-robot"></i>
-                <h3>Robotics & Automation</h3>
-                <p>Advanced automation systems to enhance productivity.</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-brain"></i>
-                <h3>AI & Machine Learning</h3>
-                <p>Intelligent systems powered by data-driven insights.</p>
-            </div>
+
+            <!-- Web & App Development -->
+            <a href="web-app-development.html" class="service-link">
+                <div class="service-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Web & App Development</h3>
+                    <p>Modern, responsive, and scalable digital solutions.</p>
+                </div>
+            </a>
+
+            <!-- IoT & Embedded Systems -->
+            <a href="iot-embedded-systems.html" class="service-link">
+                <div class="service-card">
+                    <i class="fas fa-microchip"></i>
+                    <h3>IoT & Embedded Systems</h3>
+                    <p>Smart hardware solutions for real-world applications.</p>
+                </div>
+            </a>
+
+            <!-- Robotics & Automation -->
+            <a href="robotics-automation.html" class="service-link">
+                <div class="service-card">
+                    <i class="fas fa-robot"></i>
+                    <h3>Robotics & Automation</h3>
+                    <p>Advanced automation systems to enhance productivity.</p>
+                </div>
+            </a>
+
+            <!-- AI & Machine Learning -->
+            <a href="ai-machine-learning.html" class="service-link">
+                <div class="service-card">
+                    <i class="fas fa-brain"></i>
+                    <h3>AI & Machine Learning</h3>
+                    <p>Intelligent systems powered by data-driven insights.</p>
+                </div>
+            </a>
+
+            <!-- Game Development and MODS -->
+            <a href="game-development-mods.html" class="service-link">
+                <div class="service-card">
+                    <i class="fas fa-gamepad"></i>
+                    <h3>Game Development and MODS</h3>
+                    <p>Our Own Games and MODS for various Games.</p>
+                </div>
+            </a>
+
         </div>
     </section>
 
@@ -102,10 +128,11 @@
                 <p><i class="fas fa-map-marker-alt"></i> Sri Lanka</p>
             </div>
 
-            <form class="contact-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea rows="5" placeholder="Your Message" required></textarea>
+            <!-- Contact Form -->
+            <form class="contact-form" action="https://formspree.io/f/your-id" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
                 <button type="submit" class="btn-primary">Send Message</button>
             </form>
         </div>
@@ -116,23 +143,27 @@
         <div class="footer-container">
             <p>&copy; 2026 SMRIKKT RAA SOLUTIONS. All Rights Reserved.</p>
             <div class="social-icons">
-                <a href="#"><i class="fab fa-youtube"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
             </div>
         </div>
     </footer>
 
-    <!-- Smooth Scrolling -->
+    <!-- Smooth Scrolling Script -->
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                const targetId = this.getAttribute('href');
+                if (targetId.startsWith("#") && targetId.length > 1) {
+                    e.preventDefault();
+                    document.querySelector(targetId).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
             });
         });
     </script>
+
 </body>
 </html>
