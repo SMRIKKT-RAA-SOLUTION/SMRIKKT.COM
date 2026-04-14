@@ -202,3 +202,14 @@ footer {
         gap: 10px;
     }
 }
+
+/* Make service cards clickable without affecting design */
+.service-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.service-link .service-card {
+    cursor: pointer;
+}
